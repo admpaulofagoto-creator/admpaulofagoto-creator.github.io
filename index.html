@@ -22,30 +22,30 @@
     }
 
     :root {
-      --primary-deep: #0a3b3f;
-      --primary: #1a656b;
-      --primary-light: #2e8b92;
-      --gold: #fbbf24;
-      --gold-deep: #d97706;
-      --gold-light: #fde68a;
-      --dark: #0f172a;
-      --gray: #334155;
-      --gray-light: #f8fafc;
+      --primary-deep: #1e3a47;
+      --primary: #2c5a6e;
+      --primary-light: #46b0be;
+      --gold: #c9a03d;
+      --gold-deep: #a47c2e;
+      --gold-light: #e5d6b0;
+      --dark: #0a1922;
+      --gray: #2c3e50;
+      --gray-light: #edf2f7;
       --white: #ffffff;
-      --gradient-gold: linear-gradient(145deg, #fbbf24, #f59e0b);
-      --gradient-primary: linear-gradient(145deg, #0a3b3f, #1a656b);
+      --gradient-gold: linear-gradient(145deg, #c9a03d, #a47c2e);
+      --gradient-primary: linear-gradient(145deg, #1e3a47, #2c5a6e);
       --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.1);
       --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
       --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1);
-      --shadow-gold: 0 20px 25px -5px rgba(251,191,36,0.3);
+      --shadow-gold: 0 20px 25px -5px rgba(201,160,61,0.3);
+      --whatsapp: #25D366;
+      --whatsapp-dark: #128C7E;
     }
 
     body {
       font-family: 'Inter', sans-serif;
       color: var(--gray);
-      background: radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.02) 0%, transparent 50%),
-                  repeating-linear-gradient(45deg, rgba(0,0,0,0.005) 0px, rgba(0,0,0,0.005) 2px, transparent 2px, transparent 4px),
-                  #ffffff;
+      background: #f5f7fa;
       overflow-x: hidden;
       width: 100%;
     }
@@ -85,9 +85,9 @@
       width: 100%;
       top: 0;
       z-index: 9999;
-      background: rgba(255,255,255,0.95);
+      background: rgba(255,255,255,0.97);
       backdrop-filter: blur(12px);
-      border-bottom: 3px solid var(--gold);
+      border-bottom: 3px solid var(--primary-light);
       padding: 12px 0;
       transition: all 0.3s;
     }
@@ -122,7 +122,7 @@
     .nav-links a {
       text-decoration: none;
       color: var(--dark);
-      font-weight: 700;
+      font-weight: 600;
       font-size: 0.95rem;
       transition: 0.2s;
       position: relative;
@@ -135,8 +135,8 @@
       bottom: -4px;
       left: 0;
       width: 0;
-      height: 3px;
-      background: var(--gradient-gold);
+      height: 2px;
+      background: var(--primary-light);
       transition: 0.3s;
     }
 
@@ -145,26 +145,27 @@
     }
 
     .btn-wa {
-      background: var(--gradient-gold);
-      color: var(--primary-deep);
+      background: var(--whatsapp-dark);
+      color: white;
       padding: 10px 20px;
       border-radius: 40px;
-      font-weight: 800;
+      font-weight: 600;
       display: flex;
       align-items: center;
       gap: 8px;
       text-decoration: none;
-      box-shadow: var(--shadow-gold);
+      box-shadow: 0 4px 12px rgba(18, 140, 126, 0.3);
       transition: 0.3s;
-      border: 2px solid white;
       white-space: nowrap;
       flex-shrink: 0;
       font-size: 0.9rem;
     }
 
     .btn-wa:hover {
+      background: var(--whatsapp-dark);
+      filter: brightness(1.1);
       transform: scale(1.05);
-      box-shadow: 0 25px 30px -8px rgba(251,191,36,0.4);
+      box-shadow: 0 8px 16px rgba(18, 140, 126, 0.4);
     }
 
     /* HERO */
@@ -174,7 +175,7 @@
       align-items: center;
       padding: 100px 0 60px;
       position: relative;
-      background: linear-gradient(135deg, #fff8e7, #ffffff);
+      background: linear-gradient(135deg, #f8fafc, #ffffff);
       overflow: hidden;
       width: 100%;
     }
@@ -189,16 +190,15 @@
 
     .hero-badge {
       display: inline-block;
-      background: var(--gold);
-      color: var(--primary-deep);
-      font-weight: 800;
+      background: var(--primary-light);
+      color: var(--white);
+      font-weight: 600;
       padding: 8px 20px;
       border-radius: 40px;
       font-size: 0.85rem;
       letter-spacing: 1px;
       margin-bottom: 20px;
       text-transform: uppercase;
-      border: 2px solid white;
     }
 
     .hero h1 {
@@ -210,7 +210,7 @@
     }
 
     .hero-highlight {
-      color: var(--gold);
+      color: var(--primary-light);
       position: relative;
       display: inline-block;
     }
@@ -222,7 +222,7 @@
       left: 0;
       width: 100%;
       height: 8px;
-      background: rgba(251,191,36,0.2);
+      background: rgba(70, 176, 190, 0.15);
       z-index: -1;
     }
 
@@ -231,7 +231,7 @@
       color: var(--gray);
       margin-bottom: 30px;
       max-width: 100%;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 1.5;
     }
 
@@ -249,7 +249,7 @@
       gap: 10px;
       padding: 14px 28px;
       border-radius: 50px;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 0.95rem;
       text-decoration: none;
       transition: 0.3s;
@@ -277,6 +277,19 @@
     .btn-outline:hover {
       background: var(--primary);
       color: white;
+    }
+
+    /* Botão WhatsApp - estilo específico com verde escuro */
+    .btn-wa-outline {
+      background: transparent;
+      color: var(--whatsapp-dark);
+      border: 2px solid var(--whatsapp-dark);
+    }
+
+    .btn-wa-outline:hover {
+      background: var(--whatsapp-dark);
+      color: white;
+      border-color: var(--whatsapp-dark);
     }
 
     /* SEÇÕES */
@@ -308,21 +321,21 @@
       line-height: 1.6;
     }
 
-    /* SERVIÇOS CARDS */
+    /* SERVIÇOS CARDS - ESTILO MAIS DINÂMICO E MENOR */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      gap: 20px;
       width: 100%;
     }
 
     .service-card {
       background: white;
-      padding: 40px 25px;
-      border-radius: 28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      transition: 0.4s;
-      border: 1px solid #f1f5f9;
+      padding: 28px 20px;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+      transition: all 0.3s ease;
+      border: 1px solid #e9ecef;
       position: relative;
       overflow: hidden;
       width: 100%;
@@ -330,6 +343,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      transform: translateY(0);
     }
 
     .service-card::after {
@@ -339,14 +353,16 @@
       left: 0;
       width: 100%;
       height: 4px;
-      background: var(--gradient-gold);
+      background: linear-gradient(90deg, var(--primary-light), var(--whatsapp-dark));
       transform: scaleX(0);
-      transition: 0.4s;
+      transition: transform 0.4s ease;
+      transform-origin: left;
     }
 
     .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 30px 40px -15px rgba(251,191,36,0.2);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 30px -10px rgba(70, 176, 190, 0.25);
+      border-color: var(--primary-light);
     }
 
     .service-card:hover::after {
@@ -354,30 +370,31 @@
     }
 
     .service-icon {
-      width: 70px;
-      height: 70px;
-      background: #fef3c7;
-      border-radius: 20px;
+      width: 60px;
+      height: 60px;
+      background: #e8f4f7;
+      border-radius: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
-      color: var(--gold);
-      margin-bottom: 20px;
-      transition: 0.3s;
+      font-size: 1.8rem;
+      color: var(--primary-light);
+      margin-bottom: 16px;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       flex-shrink: 0;
     }
 
     .service-card:hover .service-icon {
-      background: var(--gradient-gold);
+      background: var(--primary-light);
       color: white;
-      transform: rotate(5deg) scale(1.05);
+      transform: rotate(5deg) scale(1.1);
+      box-shadow: 0 8px 16px rgba(70, 176, 190, 0.3);
     }
 
     .service-card h3 {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       color: var(--primary-deep);
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       word-wrap: break-word;
       line-height: 1.3;
     }
@@ -385,7 +402,12 @@
     .service-card p {
       word-wrap: break-word;
       line-height: 1.5;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+    
+    .service-card p:last-child {
+      margin-top: 4px;
     }
 
     /* SOBRE */
@@ -422,13 +444,13 @@
       align-items: center;
       gap: 12px;
       margin-bottom: 16px;
-      font-weight: 600;
+      font-weight: 500;
       word-wrap: break-word;
       font-size: 1rem;
     }
 
     .about-list i {
-      color: var(--gold);
+      color: var(--primary-light);
       font-size: 1.2rem;
       flex-shrink: 0;
       width: 24px;
@@ -451,7 +473,7 @@
       border-radius: 28px;
       box-shadow: var(--shadow-sm);
       transition: 0.3s;
-      border: 1px solid #f1f5f9;
+      border: 1px solid #e9ecef;
       width: 100%;
       height: 100%;
       display: flex;
@@ -462,19 +484,19 @@
     .differential-item:hover {
       transform: translateY(-6px);
       box-shadow: var(--shadow-md);
-      border-color: var(--gold-light);
+      border-color: var(--primary-light);
     }
 
     .differential-icon {
       width: 60px;
       height: 60px;
-      background: var(--gradient-gold);
+      background: linear-gradient(145deg, #46b0be, #2c5a6e);
       border-radius: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.8rem;
-      color: var(--primary-deep);
+      color: var(--white);
       margin: 0 auto 20px;
       flex-shrink: 0;
     }
@@ -517,13 +539,13 @@
     .contact-icon {
       width: 50px;
       height: 50px;
-      background: rgba(251,191,36,0.15);
+      background: rgba(70, 176, 190, 0.15);
       border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.5rem;
-      color: var(--gold);
+      color: var(--primary-light);
       flex-shrink: 0;
     }
 
@@ -538,7 +560,7 @@
     }
 
     .contact-item p:first-child {
-      font-weight: 600;
+      font-weight: 500;
       margin-bottom: 4px;
       font-size: 0.95rem;
       opacity: 0.9;
@@ -572,7 +594,7 @@
 
     footer ul {
       list-style: none;
-      color: #94a3b8;
+      color: #a0b3c5;
       width: 100%;
     }
 
@@ -593,7 +615,7 @@
       max-width: 100%;
       font-size: 0.95rem;
       line-height: 1.6;
-      color: #94a3b8;
+      color: #a0b3c5;
     }
 
     footer h4 {
@@ -610,9 +632,9 @@
       max-height: 45px;
     }
 
-    /* ===== IRPF HIGHLIGHT - CORRIGIDO E ALINHADO ===== */
+    /* IRPF HIGHLIGHT */
     .irpf-highlight {
-      background: linear-gradient(145deg, #fef3c7, #fde68a);
+      background: linear-gradient(145deg, #e8f4f7, #d1e9ef);
       padding: 20px;
       border-radius: 24px;
       color: var(--primary-deep);
@@ -620,14 +642,14 @@
       align-items: center;
       gap: 16px;
       margin: 20px 0;
-      border: 2px solid var(--gold);
+      border: 2px solid var(--primary-light);
       width: 100%;
-      box-shadow: 0 8px 20px rgba(251, 191, 36, 0.15);
+      box-shadow: 0 8px 20px rgba(70, 176, 190, 0.1);
     }
 
     .irpf-highlight i {
       font-size: 2.2rem;
-      color: var(--gold-deep);
+      color: var(--primary-light);
       flex-shrink: 0;
       width: 48px;
       height: 48px;
@@ -646,7 +668,7 @@
     }
 
     .irpf-highlight p {
-      font-weight: 600;
+      font-weight: 500;
       margin-bottom: 4px;
       font-size: 1rem;
       color: var(--primary-deep);
@@ -663,7 +685,7 @@
       letter-spacing: -0.5px;
     }
 
-    /* Break email - CORRIGIDO PARA NÃO QUEBRAR O "M" NO COMPUTADOR */
+    /* Break email */
     .break-email {
       word-break: normal;
       word-wrap: normal;
@@ -778,22 +800,22 @@
       /* Serviços */
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 15px;
       }
       
       .service-card {
-        padding: 30px 20px;
+        padding: 24px 18px;
       }
       
       .service-card h3 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
       }
       
       .service-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.8rem;
-        margin-bottom: 16px;
+        width: 55px;
+        height: 55px;
+        font-size: 1.6rem;
+        margin-bottom: 14px;
       }
 
       /* Sobre */
@@ -831,7 +853,7 @@
         font-size: 1.6rem;
       }
 
-      /* CONTATO - AJUSTE PRINCIPAL DO E-MAIL */
+      /* CONTATO */
       .contact-premium {
         grid-template-columns: 1fr;
         padding: 30px 20px !important;
@@ -859,7 +881,7 @@
         font-size: 1rem;
       }
       
-      /* E-MAIL ESPECÍFICO - REDUZIDO */
+      /* E-MAIL */
       .break-email {
         font-size: 0.9rem !important;
         line-height: 1.3;
@@ -979,7 +1001,7 @@
         margin-bottom: 12px !important;
       }
 
-      /* IRPF HIGHLIGHT - MOBILE PEQUENO */
+      /* IRPF HIGHLIGHT */
       .irpf-highlight {
         padding: 14px;
         gap: 10px;
@@ -1000,24 +1022,6 @@
 
       .irpf-highlight span {
         font-size: 1.5rem;
-      }
-
-      /* Checkmarks */
-      .hero-grid div[style*="gap: 16px"] {
-        gap: 12px !important;
-        margin: 20px 0 !important;
-      }
-      
-      .hero-grid div[style*="gap: 16px"] > div {
-        gap: 8px !important;
-      }
-      
-      .hero-grid div[style*="gap: 16px"] i {
-        font-size: 1rem !important;
-      }
-      
-      .hero-grid div[style*="gap: 16px"] span {
-        font-size: 0.9rem !important;
       }
 
       /* Seções */
@@ -1046,11 +1050,11 @@
       }
       
       .service-card {
-        padding: 25px 20px;
+        padding: 22px 18px;
       }
       
       .service-card h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
       }
       
       .service-card p {
@@ -1058,10 +1062,10 @@
       }
       
       .service-icon {
-        width: 55px;
-        height: 55px;
-        font-size: 1.6rem;
-        margin-bottom: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        margin-bottom: 12px;
       }
 
       /* Sobre */
@@ -1117,7 +1121,7 @@
         margin-bottom: 15px;
       }
 
-      /* CONTATO - AJUSTES PARA 480px */
+      /* CONTATO */
       .contact-premium {
         padding: 25px 16px !important;
         gap: 25px;
@@ -1146,7 +1150,6 @@
         font-size: 0.9rem;
       }
       
-      /* E-MAIL - REDUZIDO PARA 480px */
       .break-email {
         font-size: 0.8rem !important;
         line-height: 1.2;
@@ -1229,14 +1232,14 @@
       }
       
       .service-card h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
       
       .differential-item h4 {
         font-size: 1.1rem;
       }
       
-      /* IRPF HIGHLIGHT - EXTRA PEQUENO */
+      /* IRPF HIGHLIGHT */
       .irpf-highlight i {
         font-size: 1.3rem;
         width: 32px;
@@ -1247,7 +1250,7 @@
         font-size: 1.3rem;
       }
       
-      /* CONTATO - 360px */
+      /* CONTATO */
       .contact-premium {
         padding: 20px 12px !important;
       }
@@ -1350,24 +1353,24 @@
             <a href="#contato" class="btn btn-primary">
               <i class="fas fa-calendar-check"></i> FALE CONOSCO
             </a>
-            <a href="https://wa.me/5519983247476" class="btn btn-outline">
+            <a href="https://wa.me/5519983247476" class="btn btn-wa-outline">
               <i class="fab fa-whatsapp"></i> WHATSAPP
             </a>
           </div>
         </div>
 
         <div data-aos="fade-left" data-aos-duration="1000">
-          <div style="background: white; padding: 35px; border-radius: 40px; box-shadow: var(--shadow-lg); border: 1px solid #fff; width: 100%;">
+          <div style="background: white; padding: 35px; border-radius: 40px; box-shadow: var(--shadow-lg); border: 1px solid #e9ecef; width: 100%;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 8px;">
-              <span style="background: var(--gold); padding: 6px 16px; border-radius: 30px; font-weight: 700; color: var(--primary-deep); font-size: 0.85rem;">
+              <span style="background: var(--primary-light); padding: 6px 16px; border-radius: 30px; font-weight: 600; color: var(--white); font-size: 0.85rem;">
                 <i class="fas fa-file-invoice"></i> DESTAQUE
               </span>
-              <i class="fas fa-calculator" style="font-size: 2rem; color: var(--gold);"></i>
+              <i class="fas fa-calculator" style="font-size: 2rem; color: var(--primary-light);"></i>
             </div>
             
             <h3 style="font-size: 1.8rem; color: var(--primary-deep); margin-bottom: 16px; word-wrap: break-word; line-height: 1.2;">Declaração de Imposto de Renda PF</h3>
             
-            <!-- IRPF HIGHLIGHT CORRIGIDO - PERFEITAMENTE ALINHADO -->
+            <!-- IRPF HIGHLIGHT -->
             <div class="irpf-highlight">
               <i class="fas fa-tag"></i>
               <div>
@@ -1378,28 +1381,28 @@
             
             <div style="display: flex; flex-direction: column; gap: 12px; margin: 25px 0; width: 100%;">
               <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                <i class="fas fa-check-circle" style="color: var(--gold); font-size: 1.1rem; flex-shrink: 0;"></i>
+                <i class="fas fa-check-circle" style="color: var(--primary-light); font-size: 1.1rem; flex-shrink: 0;"></i>
                 <span style="font-weight: 500; font-size: 0.95rem;">Declaração completa e simplificada</span>
               </div>
               <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                <i class="fas fa-check-circle" style="color: var(--gold); font-size: 1.1rem; flex-shrink: 0;"></i>
+                <i class="fas fa-check-circle" style="color: var(--primary-light); font-size: 1.1rem; flex-shrink: 0;"></i>
                 <span style="font-weight: 500; font-size: 0.95rem;">Atendimento especializado</span>
               </div>
               <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                <i class="fas fa-check-circle" style="color: var(--gold); font-size: 1.1rem; flex-shrink: 0;"></i>
+                <i class="fas fa-check-circle" style="color: var(--primary-light); font-size: 1.1rem; flex-shrink: 0;"></i>
                 <span style="font-weight: 500; font-size: 0.95rem;">Entrega rápida e segura</span>
               </div>
             </div>
             
-            <a href="https://wa.me/5519983247476" style="background: var(--gradient-gold); color: var(--primary-deep); padding: 14px 28px; border-radius: 50px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; margin-top: 16px; border: 2px solid white; box-shadow: var(--shadow-gold); width: 100%; text-align: center; flex-wrap: wrap; font-size: 1rem;">
+            <a href="https://wa.me/5519983247476" style="background: var(--whatsapp-dark); color: white; padding: 14px 28px; border-radius: 50px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; margin-top: 16px; box-shadow: 0 4px 12px rgba(18, 140, 126, 0.3); width: 100%; text-align: center; flex-wrap: wrap; font-size: 1rem;">
               <i class="fab fa-whatsapp"></i> QUERO DECLARAR MEU IR
             </a>
             
-            <hr style="margin: 25px 0; border: 1px dashed #e2e8f0; width: 100%;">
+            <hr style="margin: 25px 0; border: 1px dashed #d0d7de; width: 100%;">
             
             <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-              <i class="fas fa-id-card" style="color: var(--gold); font-size: 1.3rem; flex-shrink: 0;"></i>
-              <span style="font-weight: 600; font-size: 0.95rem;">Venda de Certificados Digitais</span>
+              <i class="fas fa-id-card" style="color: var(--primary-light); font-size: 1.3rem; flex-shrink: 0;"></i>
+              <span style="font-weight: 500; font-size: 0.95rem;">Venda de Certificados Digitais</span>
             </div>
           </div>
         </div>
@@ -1418,7 +1421,7 @@
       <div class="about-grid">
         <div data-aos="fade-right">
           <div style="background: var(--primary); color: white;">
-            <i class="fas fa-quote-right" style="font-size: 2.5rem; color: var(--gold); opacity: 0.5; margin-bottom: 20px;"></i>
+            <i class="fas fa-quote-right" style="font-size: 2.5rem; color: var(--primary-light); opacity: 0.5; margin-bottom: 20px;"></i>
             <h3 style="color: white; font-size: 1.8rem; margin-bottom: 16px; word-wrap: break-word; line-height: 1.2;">Compromisso com sua empresa</h3>
             <p style="font-size: 1rem; margin-bottom: 25px; opacity: 0.95; word-wrap: break-word; line-height: 1.6;">Atendimento especializado em contabilidade para MEI, ME e EPP, além de declarações de imposto de renda pessoa física a partir de R$120,00.</p>
             <ul class="about-list">
@@ -1429,21 +1432,21 @@
           </div>
         </div>
         <div data-aos="fade-left">
-          <div style="background: var(--gold); color: var(--primary-deep);">
+          <div style="background: linear-gradient(145deg, #46b0be, #2c5a6e); color: white;">
             <div style="display: flex; gap: 16px; margin-bottom: 25px; flex-wrap: wrap;">
               <div style="background: white; width: 70px; height: 70px; border-radius: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i class="fas fa-hand-holding-usd" style="font-size: 2rem; color: var(--primary);"></i>
               </div>
               <div style="min-width: 0; flex: 1;">
-                <h3 style="color: var(--primary-deep); font-size: 1.8rem; word-wrap: break-word; line-height: 1.2;">Nossos serviços</h3>
-                <p style="font-weight: 600; word-wrap: break-word; font-size: 0.95rem;">Soluções completas para sua empresa</p>
+                <h3 style="color: white; font-size: 1.8rem; word-wrap: break-word; line-height: 1.2;">Nossos serviços</h3>
+                <p style="font-weight: 400; word-wrap: break-word; font-size: 0.95rem;">Soluções completas para sua empresa</p>
               </div>
             </div>
-            <p style="font-size: 1rem; font-weight: 600; word-wrap: break-word; line-height: 1.5;">Contabilidade de MEI, ME e EPP • Simples Nacional • Lucro Presumido • Cálculos Trabalhistas</p>
+            <p style="font-size: 1rem; font-weight: 400; word-wrap: break-word; line-height: 1.5;">Contabilidade de MEI, ME e EPP • Simples Nacional • Lucro Presumido • Cálculos Trabalhistas</p>
             
-            <div style="margin-top: 25px; padding-top: 20px; border-top: 2px solid rgba(10, 59, 63, 0.2);">
-              <p style="font-weight: 700; margin-bottom: 4px;"><i class="fas fa-user-check" style="margin-right: 8px;"></i> Contador Responsável:</p>
-              <p style="font-size: 1.3rem; font-weight: 800; color: var(--primary-deep); word-wrap: break-word; line-height: 1.2;">Paulo Henrique Fagundes</p>
+            <div style="margin-top: 25px; padding-top: 20px; border-top: 2px solid rgba(255, 255, 255, 0.2);">
+              <p style="font-weight: 600; margin-bottom: 4px;"><i class="fas fa-user-check" style="margin-right: 8px;"></i> Contador Responsável:</p>
+              <p style="font-size: 1.3rem; font-weight: 700; color: white; word-wrap: break-word; line-height: 1.2;">Paulo Henrique Fagundes</p>
             </div>
           </div>
         </div>
@@ -1476,10 +1479,10 @@
   </section>
 
   <!-- SERVIÇOS -->
-  <section class="section" id="servicos" style="background: #f8fafc;">
+  <section class="section" id="servicos" style="background: #ffffff;">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span style="background: var(--gold); color: var(--primary-deep); padding: 6px 20px; border-radius: 40px; font-weight: 700; display: inline-block; margin-bottom: 16px; font-size: 0.85rem;">SERVIÇOS</span>
+        <span style="background: var(--primary-light); color: white; padding: 6px 20px; border-radius: 40px; font-weight: 600; display: inline-block; margin-bottom: 16px; font-size: 0.85rem;">SERVIÇOS</span>
         <h2>Soluções contábeis</h2>
         <p>Todos os serviços prestados pela Fagundes Assessoria Contábil</p>
       </div>
@@ -1498,8 +1501,8 @@
         <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
           <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
           <h3>Imposto de Renda PF</h3>
-          <p style="font-weight: 700; color: var(--gold-deep); margin-top: 10px; font-size: 1.3rem;">A partir de R$120</p>
-          <p style="margin-top: 8px;">Declarações de imposto de renda pessoa física</p>
+          <p style="font-weight: 700; color: var(--primary-light); margin-top: 6px; font-size: 1.2rem;">A partir de R$120</p>
+          <p style="margin-top: 4px;">Declarações de imposto de renda pessoa física</p>
         </div>
         <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
           <div class="service-icon"><i class="fas fa-file-contract"></i></div>
@@ -1554,17 +1557,17 @@
             </div>
           </div>
           
-          <div style="margin-top: 25px; background: rgba(251,191,36,0.1); padding: 20px; border-radius: 22px; border: 1px solid var(--gold); width: 100%;">
-            <p style="font-weight: 700; margin-bottom: 6px;"><i class="fas fa-tag" style="color: var(--gold); margin-right: 6px;"></i> Imposto de Renda PF</p>
-            <p style="font-size: 1.6rem; font-weight: 800; color: var(--gold); word-wrap: break-word; line-height: 1.2;">A partir de R$ 120</p>
+          <div style="margin-top: 25px; background: rgba(70, 176, 190, 0.1); padding: 20px; border-radius: 22px; border: 1px solid var(--primary-light); width: 100%;">
+            <p style="font-weight: 600; margin-bottom: 6px;"><i class="fas fa-tag" style="color: var(--primary-light); margin-right: 6px;"></i> Imposto de Renda PF</p>
+            <p style="font-size: 1.6rem; font-weight: 800; color: var(--primary-light); word-wrap: break-word; line-height: 1.2;">A partir de R$ 120</p>
             <p style="opacity: 0.9; font-size: 0.9rem;">Declaração completa com especialistas</p>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; background: rgba(255,255,255,0.05); border-radius: 32px; padding: 35px; width: 100%;">
-          <i class="fab fa-whatsapp" style="font-size: 4rem; color: var(--gold); margin-bottom: 16px;"></i>
+          <i class="fab fa-whatsapp" style="font-size: 4rem; color: var(--whatsapp); margin-bottom: 16px;"></i>
           <h4 style="color: white; font-size: 1.6rem; margin-bottom: 12px; text-align: center; word-wrap: break-word;">Atendimento via WhatsApp</h4>
           <p style="text-align: center; margin-bottom: 25px; opacity: 0.9; word-wrap: break-word; font-size: 0.95rem;">Clique no botão abaixo e fale diretamente com nossa equipe.</p>
-          <a href="https://wa.me/5519983247476" style="background: var(--gold); color: var(--primary-deep); padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; max-width: 100%; flex-wrap: wrap; justify-content: center;">
+          <a href="https://wa.me/5519983247476" style="background: var(--whatsapp-dark); color: white; padding: 16px 32px; border-radius: 50px; font-weight: 600; font-size: 1.1rem; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; max-width: 100%; flex-wrap: wrap; justify-content: center; box-shadow: 0 8px 16px rgba(18, 140, 126, 0.3);">
             <i class="fab fa-whatsapp"></i> CHAMAR AGORA
           </a>
         </div>
@@ -1582,7 +1585,7 @@
           <img src="https://i.imgur.com/RfT7Wpg.png" alt="Fagundes Assessoria Contábil">
         </div>
         <p>Escritório de contabilidade em Valinhos/SP. Especialistas em MEI, ME e EPP e Declaração de IRPF a partir de R$120.</p>
-        <p style="margin-top: 16px;"><strong style="color: var(--gold);">Contador Responsável:</strong> Paulo Henrique Fagundes</p>
+        <p style="margin-top: 16px;"><strong style="color: var(--primary-light);">Contador Responsável:</strong> Paulo Henrique Fagundes</p>
       </div>
       <div>
         <h4>Serviços</h4>
@@ -1590,7 +1593,7 @@
           <li>Contabilidade MEI/ME/EPP</li>
           <li>Simples Nacional/Lucro Presumido</li>
           <li>Abertura/Encerramento</li>
-          <li style="font-weight: 700; color: var(--gold);">IRPF a partir de R$120</li>
+          <li style="font-weight: 600; color: var(--primary-light);">IRPF a partir de R$120</li>
           <li>Regularização de empresas</li>
           <li>Alvará de Licenciamento</li>
           <li>Certificados Digitais</li>
@@ -1608,7 +1611,7 @@
         </ul>
       </div>
     </div>
-    <div style="text-align: center; padding-top: 25px; border-top: 1px solid #1e293b; color: #64748b;">
+    <div style="text-align: center; padding-top: 25px; border-top: 1px solid #1e3a47; color: #8a9eb0;">
       <p>© 2026 Fagundes Assessoria Contábil. Todos os direitos reservados.</p>
     </div>
   </div>
@@ -1635,6 +1638,11 @@
   @media (max-width: 768px) {
     .menu-toggle {
       display: block !important;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary-deep);
+      cursor: pointer;
     }
     .nav-links {
       display: none;
