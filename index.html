@@ -410,11 +410,11 @@
       margin-top: 4px;
     }
 
-    /* SOBRE */
+    /* SOBRE - Grid de 3 colunas */
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 25px;
       align-items: stretch;
       width: 100%;
     }
@@ -427,10 +427,35 @@
     .about-grid > div > div {
       width: 100%;
       height: 100%;
-      padding: 50px 40px !important;
-      border-radius: 40px !important;
+      padding: 40px 30px !important;
+      border-radius: 32px !important;
       display: flex;
       flex-direction: column;
+    }
+
+    /* Estilo para a imagem na seção sobre - sem cortes */
+    .about-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background-color: #f0f4f8; /* cor de fundo suave para caso a imagem tenha bordas */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto; /* Altura automática mantém a proporção original */
+      display: block;
+      transition: transform 0.5s ease;
+      object-fit: contain; /* Garante que a imagem inteira seja visível, mesmo que surjam barras laterais */
+    }
+
+    .about-image:hover img {
+      transform: scale(1.02);
     }
 
     .about-list {
@@ -818,7 +843,7 @@
         margin-bottom: 14px;
       }
 
-      /* Sobre */
+      /* Sobre - mobile vira 1 coluna */
       .about-grid {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -830,6 +855,12 @@
       
       .about-list li {
         font-size: 0.95rem;
+      }
+
+      /* Imagem no mobile - altura automática */
+      .about-image {
+        height: auto;
+        min-height: auto;
       }
 
       /* Diferenciais */
@@ -1095,6 +1126,11 @@
         width: 20px;
       }
 
+      /* Imagem sobre mobile */
+      .about-image {
+        height: auto;
+      }
+
       /* Diferenciais */
       .differentials-grid {
         grid-template-columns: 1fr;
@@ -1248,6 +1284,11 @@
       
       .irpf-highlight span {
         font-size: 1.3rem;
+      }
+      
+      /* Imagem sobre */
+      .about-image {
+        height: auto;
       }
       
       /* CONTATO */
@@ -1418,7 +1459,9 @@
         <p>A Fagundes Assessoria Contábil é especializada em oferecer soluções contábeis completas para empresas de pequeno, médio e grande porte, além de profissionais autônomos e MEIs. Nosso compromisso é garantir segurança fiscal, organização financeira e crescimento sustentável para nossos clientes. Trabalhamos com ética, transparência e responsabilidade, oferecendo atendimento personalizado e estratégico.</p>
       </div>
 
+      <!-- Grid de 3 colunas: Texto 1 | Imagem | Texto 2 -->
       <div class="about-grid">
+        <!-- Coluna 1: Compromisso (antigo card azul escuro) -->
         <div data-aos="fade-right">
           <div style="background: var(--primary); color: white;">
             <i class="fas fa-quote-right" style="font-size: 2.5rem; color: var(--primary-light); opacity: 0.5; margin-bottom: 20px;"></i>
@@ -1431,6 +1474,15 @@
             </ul>
           </div>
         </div>
+
+        <!-- Coluna 2: Imagem (agora sem cortes) -->
+        <div data-aos="fade-up">
+          <div class="about-image">
+            <img src="https://i.imgur.com/avE7a7p.jpeg" alt="Escritório Fagundes Assessoria Contábil em Valinhos/SP - Imposto de Renda 2026" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Coluna 3: Serviços e Contador (antigo card gradiente) -->
         <div data-aos="fade-left">
           <div style="background: linear-gradient(145deg, #46b0be, #2c5a6e); color: white;">
             <div style="display: flex; gap: 16px; margin-bottom: 25px; flex-wrap: wrap;">
