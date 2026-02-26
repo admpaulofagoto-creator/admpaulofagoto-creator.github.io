@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Artigos | Fagundes Assessoria Contábil</title>
+  
+  <!-- FONTES PREMIUM -->
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FONT AWESOME 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    /* ===== TODOS OS ESTILOS DO SITE ORIGINAL ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-deep: #1e3a47;
+      --primary: #2c5a6e;
+      --primary-light: #46b0be;
+      --gold: #c9a03d;
+      --gold-deep: #a47c2e;
+      --gold-light: #e5d6b0;
+      --dark: #0a1922;
+      --gray: #2c3e50;
+      --gray-light: #edf2f7;
+      --white: #ffffff;
+      --gradient-gold: linear-gradient(145deg, #c9a03d, #a47c2e);
+      --gradient-primary: linear-gradient(145deg, #1e3a47, #2c5a6e);
+      --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
+      --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1);
+      --shadow-gold: 0 20px 25px -5px rgba(201,160,61,0.3);
+      --whatsapp: #25D366;
+      --whatsapp-dark: #128C7E;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gray);
+      background: #f5f7fa;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 10;
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    p, span, a, li, div {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 9999;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 3px solid var(--primary-light);
+      padding: 12px 0;
+      transition: all 0.3s;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+    
+    .logo-img {
+      height: 50px;
+      width: auto;
+      display: block;
+      max-width: 100%;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: 0.2s;
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-light);
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .btn-wa {
+      background: var(--whatsapp-dark);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 40px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(18, 140, 126, 0.3);
+      transition: 0.3s;
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+    }
+
+    .btn-wa:hover {
+      background: var(--whatsapp-dark);
+      filter: brightness(1.1);
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(18, 140, 126, 0.4);
+    }
+
+    /* BOTÕES */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: 0.3s;
+      border: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      color: white;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* SEÇÃO ARTIGOS */
+    .page-header {
+      padding: 140px 0 40px;
+      background: linear-gradient(135deg, #f8fafc, #ffffff);
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 3.5rem;
+      color: var(--primary-deep);
+      margin-bottom: 16px;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      color: var(--gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--white);
+      font-weight: 600;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .articles-section {
+      padding: 60px 0 80px;
+    }
+
+    /* Grid de artigos */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    /* Card de artigo */
+    .article-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      border: 1px solid #e9ecef;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-light);
+    }
+
+    .article-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: #e8f4f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .article-card:hover .article-image img {
+      transform: scale(1.05);
+    }
+
+    .article-content {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 500;
+      flex-wrap: wrap;
+    }
+
+    .article-meta i {
+      color: var(--primary-light);
+    }
+
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .article-content h3 {
+      font-size: 1.4rem;
+      color: var(--primary-deep);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .article-content p {
+      color: var(--gray);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      flex: 1;
+    }
+
+    .article-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary-light);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      margin-top: auto;
+      transition: gap 0.3s;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .article-link:hover {
+      gap: 12px;
+      color: var(--primary-deep);
+    }
+
+    /* Artigo completo (inicialmente oculto) */
+    .full-article {
+      background: white;
+      border-radius: 32px;
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      margin-top: 40px;
+      display: none;
+    }
+
+    .full-article.show {
+      display: block;
+    }
+
+    .full-article .article-header {
+      margin-bottom: 30px;
+    }
+
+    .full-article .article-header h2 {
+      font-size: 2.2rem;
+      color: var(--primary-deep);
+      margin: 15px 0 10px;
+      line-height: 1.2;
+    }
+
+    .full-article .featured-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 24px;
+      margin: 20px 0 30px;
+    }
+
+    .full-article .article-body {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--gray);
+    }
+
+    .full-article .article-body p {
+      margin-bottom: 20px;
+    }
+
+    .full-article .article-body h3 {
+      font-size: 1.6rem;
+      color: var(--primary-deep);
+      margin: 30px 0 15px;
+    }
+
+    .full-article .article-body ul {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    .full-article .article-body li {
+      margin-bottom: 10px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+
+    .btn-back:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 50px 0 25px;
+      width: 100%;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 35px;
+      margin-bottom: 35px;
+      width: 100%;
+    }
+
+    .footer-grid > div {
+      min-width: 0;
+      width: 100%;
+    }
+
+    footer ul {
+      list-style: none;
+      color: #a0b3c5;
+      width: 100%;
+    }
+
+    footer ul li {
+      margin-bottom: 10px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      max-width: 100%;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    footer p {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      max-width: 100%;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #a0b3c5;
+    }
+
+    footer h4 {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      margin-bottom: 18px;
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    footer img {
+      max-width: 100%;
+      height: auto;
+      max-height: 45px;
+    }
+
+    /* Break email */
+    .break-email {
+      word-break: normal;
+      word-wrap: normal;
+      overflow-wrap: normal;
+      display: inline-block;
+      max-width: 100%;
+      white-space: normal;
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+    @media (max-width: 1024px) {
+      .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      header {
+        padding: 10px 0;
+      }
+      
+      .logo-img {
+        height: 40px;
+      }
+      
+      .btn-wa {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        gap: 6px;
+      }
+
+      .page-header {
+        padding: 120px 0 30px;
+      }
+
+      .page-header h1 {
+        font-size: 2.8rem;
+      }
+
+      .page-header p {
+        font-size: 1rem;
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .full-article {
+        padding: 25px;
+      }
+
+      .full-article .article-header h2 {
+        font-size: 1.8rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      header {
+        padding: 8px 0;
+      }
+      
+      .logo-img {
+        height: 35px;
+      }
+      
+      .btn-wa {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+        gap: 4px;
+      }
+
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .page-header p {
+        font-size: 0.95rem;
+      }
+
+      .article-content {
+        padding: 20px;
+      }
+
+      .article-content h3 {
+        font-size: 1.3rem;
+      }
+
+      .full-article {
+        padding: 20px;
+      }
+
+      .full-article .article-header h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* MENU MOBILE */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block !important;
+        background: transparent;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--primary-deep);
+        cursor: pointer;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+        flex-direction: column;
+        text-align: center;
+        z-index: 9999;
+        gap: 15px;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .nav-links li {
+        width: 100%;
+      }
+      .nav-links a {
+        display: block;
+        padding: 8px 0;
+        white-space: normal;
+        font-size: 1rem;
+      }
+    }
+
+    /* ANIMAÇÕES */
+    [data-aos] {
+      pointer-events: none;
+    }
+    [data-aos].aos-animate {
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <img src="https://i.imgur.com/RfT7Wpg.png" alt="Fagundes Assessoria Contábil" class="logo-img">
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html#home">INÍCIO</a></li>
+        <li><a href="index.html#sobre">SOBRE</a></li>
+        <li><a href="index.html#servicos">SERVIÇOS</a></li>
+        <li><a href="artigos.html" style="color: var(--primary-light); font-weight: 700;">ARTIGOS</a></li>
+        <li><a href="index.html#contato">CONTATO</a></li>
+      </ul>
+
+      <a href="https://wa.me/5519983247476" class="btn-wa">
+        <i class="fab fa-whatsapp"></i> FALE
+      </a>
+      <button class="menu-toggle" id="menuToggle" style="display: none;">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <span class="hero-badge" data-aos="fade-up">
+        <i class="fas fa-newspaper"></i> BLOG & CONTEÚDOS
+      </span>
+      <h1 data-aos="fade-up" data-aos-delay="100">Artigos e Notícias</h1>
+      <p data-aos="fade-up" data-aos-delay="200">Fique por dentro das novidades sobre contabilidade, impostos, gestão empresarial e declaração de IR.</p>
+    </div>
+  </section>
+
+  <!-- ARTIGOS SECTION -->
+  <section class="articles-section">
+    <div class="container">
+      <!-- Botão Voltar (inicialmente oculto) -->
+      <div class="btn-back" id="btnBack" style="display: none;">
+        <i class="fas fa-arrow-left"></i> Voltar para artigos
+      </div>
+
+      <!-- Grid de artigos (visível inicialmente) -->
+      <div class="articles-grid" id="articlesGrid" data-aos="fade-up">
+        <!-- Card do artigo sobre Reforma Tributária -->
+        <div class="article-card">
+          <div class="article-image">
+            <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reforma Tributária - cálculo e dinheiro">
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span><i class="far fa-calendar-alt"></i> 26/02/2026</span>
+              <span><i class="far fa-user"></i> Paulo H. Fagundes</span>
+              <span><i class="far fa-folder"></i> Legislação</span>
+            </div>
+            <h3>Reforma Tributária: o que muda para a sua empresa?</h3>
+            <p>A Reforma Tributária (EC 132/2023) unifica impostos federais, estaduais e municipais. Entenda como ficam PIS, Cofins, IPI, ICMS e ISS, o novo IBS e a CBS, e como preparar seu negócio para a transição.</p>
+            <button class="article-link" id="readMoreBtn">
+              Ler artigo completo <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Espaço para futuros artigos (adicione mais cards aqui) -->
+      </div>
+
+      <!-- Artigo completo (inicialmente oculto) -->
+      <div class="full-article" id="fullArticle">
+        <div class="article-header">
+          <div class="article-meta">
+            <span><i class="far fa-calendar-alt"></i> 26/02/2026</span>
+            <span><i class="far fa-user"></i> Paulo H. Fagundes</span>
+            <span><i class="far fa-folder"></i> Legislação</span>
+          </div>
+          <h2>Reforma Tributária: o que muda para a sua empresa?</h2>
+        </div>
+
+        <img class="featured-image" src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Reforma Tributária">
+
+        <div class="article-body">
+          <p>A Emenda Constitucional 132/2023, promulgada em dezembro de 2023, institui a maior reforma tributária do Brasil desde a Constituição de 1988. O novo sistema simplifica a tributação sobre o consumo, unificando cinco tributos em dois: a Contribuição sobre Bens e Serviços (CBS), federal, e o Imposto sobre Bens e Serviços (IBS), gerido por estados e municípios. Haverá ainda o Imposto Seletivo (IS) para produtos prejudiciais à saúde e ao meio ambiente.</p>
+
+          <h3>Principais mudanças</h3>
+          <ul>
+            <li><strong>Fim da cumulatividade:</strong> os novos tributos serão não cumulativos, permitindo o crédito amplo de todas as etapas da cadeia.</li>
+            <li><strong>Unificação de legislações:</strong> as 27 legislações estaduais de ICMS e as milhares de leis municipais de ISS darão lugar a uma única lei complementar federal.</li>
+            <li><strong>Alíquota única:</strong> haverá uma alíquota padrão para todos os produtos e serviços, com reduções específicas para setores como saúde, educação e transporte público.</li>
+            <li><strong>Transição longa:</strong> a substituição será gradual entre 2026 e 2032, com convivência dos sistemas antigo e novo até 2033.</li>
+          </ul>
+
+          <h3>Impactos para MEI, ME e EPP</h3>
+          <p>Empresas optantes pelo Simples Nacional continuarão no regime diferenciado, mas poderão optar por recolher CBS e IBS fora do Simples caso seja mais vantajoso. Haverá um novo sistema de cashback para famílias de baixa renda, que pode gerar créditos ao longo da cadeia. Além disso, a reforma prevê a não incidência de impostos sobre exportações e a manutenção do diferencial competitivo para micro e pequenas empresas.</p>
+
+          <h3>Preparação necessária</h3>
+          <p>Os contadores e empresários devem se preparar para a mudança: ajustar sistemas de faturamento, entender as novas regras de crédito e planejar a precificação. A Fagundes Assessoria Contábil está à disposição para orientar sua empresa nessa transição e garantir que você aproveite as oportunidades da nova legislação.</p>
+        </div>
+      </div>
+
+      <!-- Botão para carregar mais (opcional) -->
+      <div style="text-align: center; margin-top: 50px;" data-aos="fade-up">
+        <a href="#" class="btn btn-outline" style="padding: 14px 40px;">
+          <i class="fas fa-sync-alt"></i> Carregar mais artigos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL (WHATSAPP) - IGUAL AO SITE ORIGINAL -->
+  <section style="padding: 0 0 80px;">
+    <div class="container">
+      <div style="background: var(--primary-deep); border-radius: 40px; padding: 50px; color: white; text-align: center;" data-aos="zoom-in">
+        <i class="fab fa-whatsapp" style="font-size: 4rem; color: var(--whatsapp); margin-bottom: 20px;"></i>
+        <h2 style="color: white; font-size: 2.2rem; margin-bottom: 16px;">Fale com um especialista</h2>
+        <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; opacity: 0.9;">Tire suas dúvidas sobre contabilidade, impostos ou declaração de IR. Atendimento rápido e personalizado.</p>
+        <a href="https://wa.me/5519983247476" class="btn" style="background: var(--whatsapp-dark); color: white; padding: 16px 40px; font-size: 1.2rem; display: inline-flex; align-items: center; gap: 10px;">
+          <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="margin-bottom: 16px;">
+          <img src="https://i.imgur.com/RfT7Wpg.png" alt="Fagundes Assessoria Contábil">
+        </div>
+        <p>Escritório de contabilidade em Valinhos/SP. Especialistas em MEI, ME e EPP e Declaração de IRPF a partir de R$120.</p>
+        <p style="margin-top: 16px;"><strong style="color: var(--primary-light);">Contador Responsável:</strong> Paulo Henrique Fagundes</p>
+      </div>
+      <div>
+        <h4>Serviços</h4>
+        <ul>
+          <li>Contabilidade MEI/ME/EPP</li>
+          <li>Simples Nacional/Lucro Presumido</li>
+          <li>Abertura/Encerramento</li>
+          <li style="font-weight: 600; color: var(--primary-light);">IRPF a partir de R$120</li>
+          <li>Regularização de empresas</li>
+          <li>Alvará de Licenciamento</li>
+          <li>Certificados Digitais</li>
+          <li>Cálculos Trabalhistas</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>(19) 98324-7476</li>
+          <li class="break-email">fagundesassessoriacontabil@hotmail.com</li>
+          <li>Valinhos/SP</li>
+          <li>Segunda a sexta</li>
+          <li>09h às 12h | 13h às 18h</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align: center; padding-top: 25px; border-top: 1px solid #1e3a47; color: #8a9eb0;">
+      <p>© 2026 Fagundes Assessoria Contábil. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 600,
+    once: true,
+    offset: 50,
+    disable: window.innerWidth < 768
+  });
+
+  // MENU MOBILE
+  document.getElementById('menuToggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  });
+
+  // LÓGICA PARA EXIBIR ARTIGO COMPLETO
+  const readMoreBtn = document.getElementById('readMoreBtn');
+  const btnBack = document.getElementById('btnBack');
+  const articlesGrid = document.getElementById('articlesGrid');
+  const fullArticle = document.getElementById('fullArticle');
+
+  readMoreBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    articlesGrid.style.display = 'none';
+    fullArticle.classList.add('show');
+    btnBack.style.display = 'inline-flex';
+    // Rolar suavemente até o artigo
+    fullArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  btnBack.addEventListener('click', function() {
+    fullArticle.classList.remove('show');
+    articlesGrid.style.display = 'grid';
+    btnBack.style.display = 'none';
+    // Rolar de volta para o grid
+    articlesGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>
+
+</body>
+</html>
