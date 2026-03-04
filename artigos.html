@@ -404,13 +404,53 @@
       margin: 30px 0 15px;
     }
 
-    .full-article .article-body ul {
+    .full-article .article-body ul, .full-article .article-body ol {
       margin: 20px 0;
       padding-left: 20px;
     }
 
     .full-article .article-body li {
       margin-bottom: 10px;
+    }
+
+    /* Estilo para tabelas */
+    .full-article table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.95rem;
+      box-shadow: var(--shadow-sm);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .full-article th {
+      background: var(--primary-deep);
+      color: white;
+      font-weight: 600;
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    .full-article td {
+      padding: 10px 15px;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .full-article tr:last-child td {
+      border-bottom: none;
+    }
+
+    .full-article tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .full-article .table-caption {
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-top: -15px;
+      margin-bottom: 20px;
+      font-weight: 500;
     }
 
     .btn-back {
@@ -560,6 +600,14 @@
         grid-template-columns: 1fr;
         gap: 30px;
       }
+
+      .full-article table {
+        font-size: 0.85rem;
+      }
+
+      .full-article th, .full-article td {
+        padding: 8px 10px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -702,7 +750,7 @@
 
       <!-- Grid de artigos (visível inicialmente) -->
       <div class="articles-grid" id="articlesGrid" data-aos="fade-up">
-        <!-- Card do artigo sobre Reforma Tributária -->
+        <!-- Card do artigo 1: Reforma Tributária -->
         <div class="article-card">
           <div class="article-image">
             <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reforma Tributária - cálculo e dinheiro">
@@ -715,7 +763,26 @@
             </div>
             <h3>Reforma Tributária: o que muda para a sua empresa?</h3>
             <p>A Reforma Tributária (EC 132/2023) unifica impostos federais, estaduais e municipais. Entenda como ficam PIS, Cofins, IPI, ICMS e ISS, o novo IBS e a CBS, e como preparar seu negócio para a transição.</p>
-            <button class="article-link" id="readMoreBtn">
+            <button class="article-link" data-target="artigo-reforma">
+              Ler artigo completo <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card do novo artigo: IR 2026 -->
+        <div class="article-card">
+          <div class="article-image">
+            <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Imposto de Renda - declaração">
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span><i class="far fa-calendar-alt"></i> 04/03/2026</span>
+              <span><i class="far fa-user"></i> Paulo H. Fagundes</span>
+              <span><i class="far fa-folder"></i> Imposto de Renda</span>
+            </div>
+            <h3>Quem deve declarar Imposto de Renda em 2026 (ano-base 2025)?</h3>
+            <p>A nova isenção até R$ 5 mil só valerá em 2027. Para a declaração de 2026, as regras são as atuais. Veja as tabelas e os limites de obrigatoriedade.</p>
+            <button class="article-link" data-target="artigo-ir2026">
               Ler artigo completo <i class="fas fa-arrow-right"></i>
             </button>
           </div>
@@ -724,8 +791,8 @@
         <!-- Espaço para futuros artigos (adicione mais cards aqui) -->
       </div>
 
-      <!-- Artigo completo (inicialmente oculto) -->
-      <div class="full-article" id="fullArticle">
+      <!-- Artigo completo 1: Reforma Tributária -->
+      <div class="full-article" id="artigo-reforma">
         <div class="article-header">
           <div class="article-meta">
             <span><i class="far fa-calendar-alt"></i> 26/02/2026</span>
@@ -753,6 +820,93 @@
 
           <h3>Preparação necessária</h3>
           <p>Os contadores e empresários devem se preparar para a mudança: ajustar sistemas de faturamento, entender as novas regras de crédito e planejar a precificação. A Fagundes Assessoria Contábil está à disposição para orientar sua empresa nessa transição e garantir que você aproveite as oportunidades da nova legislação.</p>
+        </div>
+      </div>
+
+      <!-- Artigo completo 2: IR 2026 -->
+      <div class="full-article" id="artigo-ir2026">
+        <div class="article-header">
+          <div class="article-meta">
+            <span><i class="far fa-calendar-alt"></i> 04/03/2026</span>
+            <span><i class="far fa-user"></i> Paulo H. Fagundes</span>
+            <span><i class="far fa-folder"></i> Imposto de Renda</span>
+          </div>
+          <h2>Quem deve declarar Imposto de Renda em 2026 (ano-base 2025)?</h2>
+        </div>
+
+        <img class="featured-image" src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Declaração de Imposto de Renda">
+
+        <div class="article-body">
+          <p>A isenção para quem ganha até R$ 5 mil por mês só valerá para rendimentos recebidos a partir de 2026, com impacto na declaração entregue em 2027.</p>
+          <p>Portanto, a declaração de 2026 (ano-base 2025) segue integralmente as regras e tabelas vigentes em 2025.</p>
+
+          <h3>Tabela do IR válida para 2026 (ano-base 2025)</h3>
+          
+          <p><strong>📌 Tabela mensal (vigente desde maio/2025)</strong></p>
+          <table>
+            <thead>
+              <tr><th>Base de cálculo</th><th>Alíquota</th><th>Dedução</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Até R$ 2.428,80</td><td>Isento</td><td>–</td></tr>
+              <tr><td>R$ 2.428,81 a R$ 2.826,65</td><td>7,5%</td><td>R$ 182,16</td></tr>
+              <tr><td>R$ 2.826,66 a R$ 3.751,05</td><td>15%</td><td>R$ 394,16</td></tr>
+              <tr><td>R$ 3.751,06 a R$ 4.664,68</td><td>22,5%</td><td>R$ 675,49</td></tr>
+              <tr><td>Acima de R$ 4.664,68</td><td>27,5%</td><td>R$ 908,73</td></tr>
+            </tbody>
+          </table>
+          <p class="table-caption">Há ainda o desconto simplificado mensal, que na prática mantém isento quem recebe até dois salários mínimos (R$ 2.824).</p>
+
+          <p><strong>📌 Tabela anual (ano-base 2025)</strong></p>
+          <table>
+            <thead>
+              <tr><th>Base de cálculo</th><th>Alíquota</th><th>Dedução</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Até R$ 28.467,20</td><td>Isento</td><td>–</td></tr>
+              <tr><td>R$ 28.467,21 a R$ 33.919,80</td><td>7,5%</td><td>R$ 2.135,04</td></tr>
+              <tr><td>R$ 33.919,81 a R$ 45.012,60</td><td>15%</td><td>R$ 4.679,03</td></tr>
+              <tr><td>R$ 45.012,61 a R$ 55.976,16</td><td>22,5%</td><td>R$ 8.054,97</td></tr>
+              <tr><td>Acima de R$ 55.976,16</td><td>27,5%</td><td>R$ 10.853,78</td></tr>
+            </tbody>
+          </table>
+          <p class="table-caption">Com o desconto simplificado anual, rendimentos tributáveis de até R$ 33.888,00 acabam ficando isentos de imposto.</p>
+
+          <div style="background: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 8px; margin: 30px 0;">
+            <p style="margin: 0; font-weight: 600;">⚠️ Atenção: estar isento de pagar imposto não significa estar dispensado de declarar.</p>
+          </div>
+
+          <h3>Quem é obrigado a declarar em 2026?</h3>
+          <p>Deve entregar a declaração quem, em 2025:</p>
+          <ul>
+            <li>Recebeu rendimentos tributáveis acima de <strong>R$ 33.888,00</strong>;</li>
+            <li>Recebeu rendimentos isentos, não tributáveis ou tributados exclusivamente na fonte acima de <strong>R$ 200 mil</strong>;</li>
+            <li>Teve ganho de capital na venda de bens;</li>
+            <li>Operou na bolsa de valores, incluindo:
+              <ul>
+                <li>vendas acima de R$ 40 mil no ano;</li>
+                <li>qualquer day trade com lucro;</li>
+                <li>vendas mensais de ações acima de R$ 20 mil com ganho;</li>
+              </ul>
+            </li>
+            <li>Teve receita bruta rural acima de <strong>R$ 169.440,00</strong> ou quer compensar prejuízos;</li>
+            <li>Possuía bens acima de <strong>R$ 800 mil</strong> em 31/12/2025;</li>
+            <li>Tornou-se residente no Brasil em 2025 e permaneceu até 31/12;</li>
+            <li>Teve rendimentos ou investimentos no exterior.</li>
+          </ul>
+
+          <h3>Resumo prático</h3>
+          <p>A nova isenção até R$ 5 mil não afeta a declaração de 2026. Quem ultrapassou os limites acima em 2025 precisa declarar, mesmo que não tenha imposto a pagar.</p>
+
+          <!-- Chamada estratégica para captação -->
+          <div style="background: var(--primary-deep); color: white; padding: 30px; border-radius: 24px; margin-top: 40px; text-align: center;">
+            <i class="fas fa-calculator" style="font-size: 3rem; color: var(--gold); margin-bottom: 16px;"></i>
+            <h4 style="color: white; font-size: 1.8rem; margin-bottom: 16px;">Precisa de ajuda para declarar seu IR?</h4>
+            <p style="font-size: 1.1rem; margin-bottom: 24px; opacity: 0.9;">Nossa equipe está pronta para fazer sua declaração com segurança e pelo menor custo. A partir de R$120!</p>
+            <a href="https://wa.me/5519983247476" class="btn" style="background: var(--whatsapp-dark); color: white; padding: 14px 32px; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px;">
+              <i class="fab fa-whatsapp"></i> FALAR COM ESPECIALISTA
+            </a>
+          </div>
         </div>
       </div>
 
@@ -836,27 +990,67 @@
     document.querySelector('.nav-links').classList.toggle('show');
   });
 
-  // LÓGICA PARA EXIBIR ARTIGO COMPLETO
-  const readMoreBtn = document.getElementById('readMoreBtn');
+  // LÓGICA PARA EXIBIR ARTIGO COMPLETO (MÚLTIPLOS ARTIGOS)
   const btnBack = document.getElementById('btnBack');
   const articlesGrid = document.getElementById('articlesGrid');
-  const fullArticle = document.getElementById('fullArticle');
+  const fullArticles = document.querySelectorAll('.full-article');
+  const articleLinks = document.querySelectorAll('.article-link');
 
-  readMoreBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    articlesGrid.style.display = 'none';
-    fullArticle.classList.add('show');
-    btnBack.style.display = 'inline-flex';
-    // Rolar suavemente até o artigo
-    fullArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
+  // Função para esconder todos os artigos completos
+  function hideAllFullArticles() {
+    fullArticles.forEach(article => {
+      article.classList.remove('show');
+    });
+  }
 
-  btnBack.addEventListener('click', function() {
-    fullArticle.classList.remove('show');
+  // Função para mostrar o grid e esconder botão voltar
+  function showGrid() {
     articlesGrid.style.display = 'grid';
     btnBack.style.display = 'none';
+    hideAllFullArticles();
+  }
+
+  // Adicionar evento a cada botão "Ler artigo completo"
+  articleLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('data-target');
+      if (targetId) {
+        const targetArticle = document.getElementById(targetId);
+        if (targetArticle) {
+          // Esconder grid, mostrar botão voltar e mostrar o artigo alvo
+          articlesGrid.style.display = 'none';
+          btnBack.style.display = 'inline-flex';
+          hideAllFullArticles();
+          targetArticle.classList.add('show');
+          // Rolar suavemente até o artigo
+          targetArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  // Botão voltar: retorna ao grid
+  btnBack.addEventListener('click', function() {
+    showGrid();
     // Rolar de volta para o grid
     articlesGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // Se houver âncora na URL (opcional para deep linking), pode-se implementar
+  window.addEventListener('load', function() {
+    // Verifica se há hash na URL e tenta abrir o artigo correspondente
+    const hash = window.location.hash.substring(1); // remove o #
+    if (hash) {
+      const targetArticle = document.getElementById(hash);
+      if (targetArticle && targetArticle.classList.contains('full-article')) {
+        articlesGrid.style.display = 'none';
+        btnBack.style.display = 'inline-flex';
+        hideAllFullArticles();
+        targetArticle.classList.add('show');
+        targetArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
   });
 </script>
 
