@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Artigos | Fagundes Assessoria Contábil</title>
   
+  <!-- Open Graph / Social meta (atualizadas dinamicamente via JS para compartilhamento profissional) -->
+  <meta property="og:title" content="Artigos | Fagundes Assessoria Contábil">
+  <meta property="og:description" content="Artigos sobre contabilidade, impostos, IR e gestão empresarial.">
+  <meta property="og:image" content="https://i.imgur.com/RfT7Wpg.png">
+  <meta property="og:url" content="https://www.fagundescontabil.com.br/artigos.html">
+  <meta property="og:type" content="website">
+  
   <!-- FONTES PREMIUM -->
   <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
@@ -454,6 +461,80 @@
       font-weight: 500;
     }
 
+    /* ===== BOTÕES DE COMPARTILHAMENTO PROFISSIONAL ===== */
+    .share-article-container {
+      margin: 40px 0 20px;
+      padding-top: 25px;
+      border-top: 2px solid #eef2f6;
+    }
+    
+    .share-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary-deep);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .share-title i {
+      color: var(--primary-light);
+      font-size: 1.2rem;
+    }
+    
+    .share-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      background: #f0f2f5;
+      color: #1e3a47;
+      text-decoration: none;
+    }
+    
+    .share-btn i {
+      font-size: 1.2rem;
+    }
+    
+    .share-btn.facebook {
+      background: #1877f2;
+      color: white;
+      box-shadow: 0 2px 8px rgba(24,119,242,0.3);
+    }
+    
+    .share-btn.facebook:hover {
+      background: #166fe5;
+      transform: translateY(-2px);
+    }
+    
+    .share-btn.linkedin {
+      background: #0a66c2;
+      color: white;
+      box-shadow: 0 2px 8px rgba(10,102,194,0.3);
+    }
+    
+    .share-btn.linkedin:hover {
+      background: #0958a8;
+      transform: translateY(-2px);
+    }
+    
+    .share-btn:hover {
+      transform: translateY(-2px);
+    }
+
     .btn-back {
       display: inline-flex;
       align-items: center;
@@ -475,7 +556,7 @@
       color: white;
     }
 
-    /* ===== NOVOS ESTILOS PARA O RODAPÉ (igual à página principal) ===== */
+    /* FOOTER */
     footer {
       background: var(--dark);
       color: white;
@@ -485,7 +566,7 @@
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 2fr 1.2fr 1.5fr 1fr; /* Agora com 4 colunas */
+      grid-template-columns: 2fr 1.2fr 1.5fr 1fr;
       gap: 30px;
       margin-bottom: 35px;
       width: 100%;
@@ -536,7 +617,6 @@
       max-height: 45px;
     }
 
-    /* E-mail com quebra forçada */
     .break-email {
       word-break: break-word;
       overflow-wrap: break-word;
@@ -545,7 +625,6 @@
       display: inline-block;
     }
 
-    /* Redes sociais no footer - estilo clean (igual à página principal) */
     .social-links {
       display: flex;
       gap: 20px;
@@ -568,13 +647,12 @@
       transform: translateY(-2px);
     }
 
-    /* ===== RESPONSIVIDADE ===== */
     @media (max-width: 1024px) {
       .articles-grid {
         grid-template-columns: repeat(2, 1fr);
       }
       .footer-grid {
-        grid-template-columns: repeat(2, 1fr); /* Ajuste para telas médias */
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -582,106 +660,35 @@
       .container {
         padding: 0 20px;
       }
-
       header {
         padding: 10px 0;
       }
-      
       .logo-img {
         height: 40px;
       }
-      
       .btn-wa {
         padding: 8px 16px;
         font-size: 0.85rem;
         gap: 6px;
       }
-
       .page-header {
         padding: 120px 0 30px;
       }
-
       .page-header h1 {
         font-size: 2.8rem;
       }
-
-      .page-header p {
-        font-size: 1rem;
-      }
-
       .articles-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
       }
-
       .full-article {
         padding: 25px;
       }
-
       .full-article .article-header h2 {
         font-size: 1.8rem;
       }
-
       .footer-grid {
-        grid-template-columns: 1fr; /* Volta para 1 coluna no mobile */
-        gap: 30px;
+        grid-template-columns: 1fr;
       }
-
-      .full-article table {
-        font-size: 0.85rem;
-      }
-
-      .full-article th, .full-article td {
-        padding: 8px 10px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        padding: 0 16px;
-      }
-
-      header {
-        padding: 8px 0;
-      }
-      
-      .logo-img {
-        height: 35px;
-      }
-      
-      .btn-wa {
-        padding: 6px 12px;
-        font-size: 0.75rem;
-        gap: 4px;
-      }
-
-      .page-header h1 {
-        font-size: 2.2rem;
-      }
-
-      .page-header p {
-        font-size: 0.95rem;
-      }
-
-      .article-content {
-        padding: 20px;
-      }
-
-      .article-content h3 {
-        font-size: 1.3rem;
-      }
-
-      .full-article {
-        padding: 20px;
-      }
-
-      .full-article .article-header h2 {
-        font-size: 1.5rem;
-      }
-    }
-
-    /* MENU MOBILE */
-    @media (max-width: 768px) {
       .menu-toggle {
         display: block !important;
         background: transparent;
@@ -718,7 +725,6 @@
       }
     }
 
-    /* ANIMAÇÕES */
     [data-aos] {
       pointer-events: none;
     }
@@ -735,7 +741,6 @@
       <div class="logo">
         <img src="https://i.imgur.com/RfT7Wpg.png" alt="Fagundes Assessoria Contábil" class="logo-img">
       </div>
-
       <ul class="nav-links">
         <li><a href="index.html#home">INÍCIO</a></li>
         <li><a href="index.html#sobre">SOBRE</a></li>
@@ -743,424 +748,173 @@
         <li><a href="artigos.html" style="color: var(--primary-light); font-weight: 700;">ARTIGOS</a></li>
         <li><a href="index.html#contato">CONTATO</a></li>
       </ul>
-
-      <a href="https://wa.me/5519983247476" class="btn-wa">
-        <i class="fab fa-whatsapp"></i> FALE
-      </a>
-      <button class="menu-toggle" id="menuToggle" style="display: none;">
-        <i class="fas fa-bars"></i>
-      </button>
+      <a href="https://wa.me/5519983247476" class="btn-wa"><i class="fab fa-whatsapp"></i> FALE</a>
+      <button class="menu-toggle" id="menuToggle" style="display: none;"><i class="fas fa-bars"></i></button>
     </nav>
   </div>
 </header>
 
 <main>
-  <!-- PAGE HEADER -->
   <section class="page-header">
     <div class="container">
-      <span class="hero-badge" data-aos="fade-up">
-        <i class="fas fa-newspaper"></i> BLOG & CONTEÚDOS
-      </span>
+      <span class="hero-badge" data-aos="fade-up"><i class="fas fa-newspaper"></i> BLOG & CONTEÚDOS</span>
       <h1 data-aos="fade-up" data-aos-delay="100">Artigos e Notícias</h1>
       <p data-aos="fade-up" data-aos-delay="200">Fique por dentro das novidades sobre contabilidade, impostos, gestão empresarial e declaração de IR.</p>
     </div>
   </section>
 
-  <!-- ARTIGOS SECTION -->
   <section class="articles-section">
     <div class="container">
-      <!-- Botão Voltar (inicialmente oculto) -->
-      <div class="btn-back" id="btnBack" style="display: none;">
-        <i class="fas fa-arrow-left"></i> Voltar para artigos
-      </div>
-
-      <!-- Grid de artigos (visível inicialmente) -->
+      <div class="btn-back" id="btnBack" style="display: none;"><i class="fas fa-arrow-left"></i> Voltar para artigos</div>
       <div class="articles-grid" id="articlesGrid" data-aos="fade-up">
-        <!-- Card do artigo 1: Reforma Tributária -->
+        <!-- Card artigo 1 -->
         <div class="article-card">
-          <div class="article-image">
-            <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reforma Tributária - cálculo e dinheiro">
-          </div>
+          <div class="article-image"><img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reforma Tributária"></div>
           <div class="article-content">
-            <div class="article-meta">
-              <span><i class="far fa-calendar-alt"></i> 26/02/2026</span>
-              <span><i class="far fa-user"></i> Paulo H. Fagundes</span>
-              <span><i class="far fa-folder"></i> Legislação</span>
-            </div>
+            <div class="article-meta"><span><i class="far fa-calendar-alt"></i> 26/02/2026</span><span><i class="far fa-user"></i> Paulo H. Fagundes</span><span><i class="far fa-folder"></i> Legislação</span></div>
             <h3>Reforma Tributária: o que muda para a sua empresa?</h3>
             <p>A Reforma Tributária (EC 132/2023) unifica impostos federais, estaduais e municipais. Entenda como ficam PIS, Cofins, IPI, ICMS e ISS, o novo IBS e a CBS, e como preparar seu negócio para a transição.</p>
-            <button class="article-link" data-target="artigo-reforma">
-              Ler artigo completo <i class="fas fa-arrow-right"></i>
-            </button>
+            <button class="article-link" data-target="artigo-reforma">Ler artigo completo <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
-
-        <!-- Card do artigo 2: IR 2026 -->
+        <!-- Card artigo 2 -->
         <div class="article-card">
-          <div class="article-image">
-            <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Imposto de Renda - declaração">
-          </div>
+          <div class="article-image"><img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Imposto de Renda"></div>
           <div class="article-content">
-            <div class="article-meta">
-              <span><i class="far fa-calendar-alt"></i> 04/03/2026</span>
-              <span><i class="far fa-user"></i> Paulo H. Fagundes</span>
-              <span><i class="far fa-folder"></i> Imposto de Renda</span>
-            </div>
+            <div class="article-meta"><span><i class="far fa-calendar-alt"></i> 04/03/2026</span><span><i class="far fa-user"></i> Paulo H. Fagundes</span><span><i class="far fa-folder"></i> Imposto de Renda</span></div>
             <h3>Quem deve declarar Imposto de Renda em 2026 (ano-base 2025)?</h3>
             <p>A nova isenção até R$ 5 mil só valerá em 2027. Para a declaração de 2026, as regras são as atuais. Veja as tabelas e os limites de obrigatoriedade.</p>
-            <button class="article-link" data-target="artigo-ir2026">
-              Ler artigo completo <i class="fas fa-arrow-right"></i>
-            </button>
+            <button class="article-link" data-target="artigo-ir2026">Ler artigo completo <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
-
-        <!-- Card do NOVO artigo 3: MEI 2026 -->
+        <!-- Card artigo 3 -->
         <div class="article-card">
-          <div class="article-image">
-            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Microempreendedor Individual - MEI">
-          </div>
+          <div class="article-image"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="MEI 2026"></div>
           <div class="article-content">
-            <div class="article-meta">
-              <span><i class="far fa-calendar-alt"></i> 10/03/2026</span>
-              <span><i class="far fa-user"></i> Paulo H. Fagundes</span>
-              <span><i class="far fa-folder"></i> MEI</span>
-            </div>
+            <div class="article-meta"><span><i class="far fa-calendar-alt"></i> 10/03/2026</span><span><i class="far fa-user"></i> Paulo H. Fagundes</span><span><i class="far fa-folder"></i> MEI</span></div>
             <h3>MEI 2026: limites, obrigações e vantagens atualizadas</h3>
             <p>O teto do MEI foi reajustado para R$ 81.000,00 em 2026. Saiba quem pode se formalizar, como declarar o faturamento e quais as novas regras para não cair no fisco.</p>
-            <button class="article-link" data-target="artigo-mei2026">
-              Ler artigo completo <i class="fas fa-arrow-right"></i>
-            </button>
+            <button class="article-link" data-target="artigo-mei2026">Ler artigo completo <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
-
-        <!-- Espaço para futuros artigos (adicione mais cards aqui) -->
       </div>
 
-      <!-- Artigo completo 1: Reforma Tributária -->
+      <!-- Artigo completo: Reforma Tributária -->
       <div class="full-article" id="artigo-reforma">
-        <div class="article-header">
-          <div class="article-meta">
-            <span><i class="far fa-calendar-alt"></i> 26/02/2026</span>
-            <span><i class="far fa-user"></i> Paulo H. Fagundes</span>
-            <span><i class="far fa-folder"></i> Legislação</span>
-          </div>
-          <h2>Reforma Tributária: o que muda para a sua empresa?</h2>
-        </div>
-
+        <div class="article-header"><div class="article-meta"><span><i class="far fa-calendar-alt"></i> 26/02/2026</span><span><i class="far fa-user"></i> Paulo H. Fagundes</span><span><i class="far fa-folder"></i> Legislação</span></div><h2>Reforma Tributária: o que muda para a sua empresa?</h2></div>
         <img class="featured-image" src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Reforma Tributária">
-
-        <div class="article-body">
-          <p>A Emenda Constitucional 132/2023, promulgada em dezembro de 2023, institui a maior reforma tributária do Brasil desde a Constituição de 1988. O novo sistema simplifica a tributação sobre o consumo, unificando cinco tributos em dois: a Contribuição sobre Bens e Serviços (CBS), federal, e o Imposto sobre Bens e Serviços (IBS), gerido por estados e municípios. Haverá ainda o Imposto Seletivo (IS) para produtos prejudiciais à saúde e ao meio ambiente.</p>
-
-          <h3>Principais mudanças</h3>
-          <ul>
-            <li><strong>Fim da cumulatividade:</strong> os novos tributos serão não cumulativos, permitindo o crédito amplo de todas as etapas da cadeia.</li>
-            <li><strong>Unificação de legislações:</strong> as 27 legislações estaduais de ICMS e as milhares de leis municipais de ISS darão lugar a uma única lei complementar federal.</li>
-            <li><strong>Alíquota única:</strong> haverá uma alíquota padrão para todos os produtos e serviços, com reduções específicas para setores como saúde, educação e transporte público.</li>
-            <li><strong>Transição longa:</strong> a substituição será gradual entre 2026 e 2032, com convivência dos sistemas antigo e novo até 2033.</li>
-          </ul>
-
-          <h3>Impactos para MEI, ME e EPP</h3>
-          <p>Empresas optantes pelo Simples Nacional continuarão no regime diferenciado, mas poderão optar por recolher CBS e IBS fora do Simples caso seja mais vantajoso. Haverá um novo sistema de cashback para famílias de baixa renda, que pode gerar créditos ao longo da cadeia. Além disso, a reforma prevê a não incidência de impostos sobre exportações e a manutenção do diferencial competitivo para micro e pequenas empresas.</p>
-
-          <h3>Preparação necessária</h3>
-          <p>Os contadores e empresários devem se preparar para a mudança: ajustar sistemas de faturamento, entender as novas regras de crédito e planejar a precificação. A Fagundes Assessoria Contábil está à disposição para orientar sua empresa nessa transição e garantir que você aproveite as oportunidades da nova legislação.</p>
-        </div>
+        <div class="article-body"><p>A Emenda Constitucional 132/2023 institui a maior reforma tributária do Brasil desde 1988...</p><h3>Principais mudanças</h3><ul><li>Fim da cumulatividade</li><li>Unificação de legislações</li><li>Alíquota única</li></ul><h3>Impactos para MEI, ME e EPP</h3><p>Empresas optantes pelo Simples Nacional continuarão no regime diferenciado...</p></div>
+        <!-- ÁREA DE COMPARTILHAMENTO -->
+        <div class="share-article-container"><div class="share-title"><i class="fas fa-share-alt"></i> Compartilhe este artigo</div><div class="share-buttons"><button class="share-btn facebook" data-share="facebook"><i class="fab fa-facebook-f"></i> Facebook</button><button class="share-btn linkedin" data-share="linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</button></div></div>
       </div>
 
-      <!-- Artigo completo 2: IR 2026 -->
+      <!-- Artigo completo: IR 2026 -->
       <div class="full-article" id="artigo-ir2026">
-        <div class="article-header">
-          <div class="article-meta">
-            <span><i class="far fa-calendar-alt"></i> 04/03/2026</span>
-            <span><i class="far fa-user"></i> Paulo H. Fagundes</span>
-            <span><i class="far fa-folder"></i> Imposto de Renda</span>
-          </div>
-          <h2>Quem deve declarar Imposto de Renda em 2026 (ano-base 2025)?</h2>
-        </div>
-
-        <img class="featured-image" src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Declaração de Imposto de Renda">
-
-        <div class="article-body">
-          <p>A isenção para quem ganha até R$ 5 mil por mês só valerá para rendimentos recebidos a partir de 2026, com impacto na declaração entregue em 2027.</p>
-          <p>Portanto, a declaração de 2026 (ano-base 2025) segue integralmente as regras e tabelas vigentes em 2025.</p>
-
-          <h3>Tabela do IR válida para 2026 (ano-base 2025)</h3>
-          
-          <p><strong>📌 Tabela mensal (vigente desde maio/2025)</strong></p>
-          <table>
-            <thead>
-              <tr><th>Base de cálculo</th><th>Alíquota</th><th>Dedução</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Até R$ 2.428,80</td><td>Isento</td><td>–</td></tr>
-              <tr><td>R$ 2.428,81 a R$ 2.826,65</td><td>7,5%</td><td>R$ 182,16</td></tr>
-              <tr><td>R$ 2.826,66 a R$ 3.751,05</td><td>15%</td><td>R$ 394,16</td></tr>
-              <tr><td>R$ 3.751,06 a R$ 4.664,68</td><td>22,5%</td><td>R$ 675,49</td></tr>
-              <tr><td>Acima de R$ 4.664,68</td><td>27,5%</td><td>R$ 908,73</td></tr>
-            </tbody>
-          </table>
-          <p class="table-caption">Há ainda o desconto simplificado mensal, que na prática mantém isento quem recebe até dois salários mínimos (R$ 2.824).</p>
-
-          <p><strong>📌 Tabela anual (ano-base 2025)</strong></p>
-          <table>
-            <thead>
-              <tr><th>Base de cálculo</th><th>Alíquota</th><th>Dedução</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Até R$ 28.467,20</td><td>Isento</td><td>–</td></tr>
-              <tr><td>R$ 28.467,21 a R$ 33.919,80</td><td>7,5%</td><td>R$ 2.135,04</td></tr>
-              <tr><td>R$ 33.919,81 a R$ 45.012,60</td><td>15%</td><td>R$ 4.679,03</td></tr>
-              <tr><td>R$ 45.012,61 a R$ 55.976,16</td><td>22,5%</td><td>R$ 8.054,97</td></tr>
-              <tr><td>Acima de R$ 55.976,16</td><td>27,5%</td><td>R$ 10.853,78</td></tr>
-            </tbody>
-          </table>
-          <p class="table-caption">Com o desconto simplificado anual, rendimentos tributáveis de até R$ 33.888,00 acabam ficando isentos de imposto.</p>
-
-          <div style="background: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 8px; margin: 30px 0;">
-            <p style="margin: 0; font-weight: 600;">⚠️ Atenção: estar isento de pagar imposto não significa estar dispensado de declarar.</p>
-          </div>
-
-          <h3>Quem é obrigado a declarar em 2026?</h3>
-          <p>Deve entregar a declaração quem, em 2025:</p>
-          <ul>
-            <li>Recebeu rendimentos tributáveis acima de <strong>R$ 33.888,00</strong>;</li>
-            <li>Recebeu rendimentos isentos, não tributáveis ou tributados exclusivamente na fonte acima de <strong>R$ 200 mil</strong>;</li>
-            <li>Teve ganho de capital na venda de bens;</li>
-            <li>Operou na bolsa de valores, incluindo:
-              <ul>
-                <li>vendas acima de R$ 40 mil no ano;</li>
-                <li>qualquer day trade com lucro;</li>
-                <li>vendas mensais de ações acima de R$ 20 mil com ganho;</li>
-              </ul>
-            </li>
-            <li>Teve receita bruta rural acima de <strong>R$ 169.440,00</strong> ou quer compensar prejuízos;</li>
-            <li>Possuía bens acima de <strong>R$ 800 mil</strong> em 31/12/2025;</li>
-            <li>Tornou-se residente no Brasil em 2025 e permaneceu até 31/12;</li>
-            <li>Teve rendimentos ou investimentos no exterior.</li>
-          </ul>
-
-          <h3>Resumo prático</h3>
-          <p>A nova isenção até R$ 5 mil não afeta a declaração de 2026. Quem ultrapassou os limites acima em 2025 precisa declarar, mesmo que não tenha imposto a pagar.</p>
-
-          <!-- Chamada estratégica para captação -->
-          <div style="background: var(--primary-deep); color: white; padding: 30px; border-radius: 24px; margin-top: 40px; text-align: center;">
-            <i class="fas fa-calculator" style="font-size: 3rem; color: var(--gold); margin-bottom: 16px;"></i>
-            <h4 style="color: white; font-size: 1.8rem; margin-bottom: 16px;">Precisa de ajuda para declarar seu IR?</h4>
-            <p style="font-size: 1.1rem; margin-bottom: 24px; opacity: 0.9;">Nossa equipe está pronta para fazer sua declaração com segurança e pelo menor custo. A partir de R$120!</p>
-            <a href="https://wa.me/5519983247476" class="btn" style="background: var(--whatsapp-dark); color: white; padding: 14px 32px; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px;">
-              <i class="fab fa-whatsapp"></i> FALAR COM ESPECIALISTA
-            </a>
-          </div>
-        </div>
+        <div class="article-header"><div class="article-meta"><span><i class="far fa-calendar-alt"></i> 04/03/2026</span><span><i class="far fa-user"></i> Paulo H. Fagundes</span><span><i class="far fa-folder"></i> Imposto de Renda</span></div><h2>Quem deve declarar Imposto de Renda em 2026?</h2></div>
+        <img class="featured-image" src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="IR 2026">
+        <div class="article-body"><p>A isenção para quem ganha até R$ 5 mil só valerá para rendimentos recebidos a partir de 2026...</p><h3>Tabela do IR válida para 2026</h3><table><thead><tr><th>Base de cálculo</th><th>Alíquota</th></tr></thead><tbody><tr><td>Até R$ 2.428,80</td><td>Isento</td></tr></tbody></table><div style="background: #fff3cd; padding:20px;"><p>⚠️ Atenção: estar isento de pagar imposto não significa estar dispensado de declarar.</p></div></div>
+        <div class="share-article-container"><div class="share-title"><i class="fas fa-share-alt"></i> Compartilhe este artigo</div><div class="share-buttons"><button class="share-btn facebook" data-share="facebook"><i class="fab fa-facebook-f"></i> Facebook</button><button class="share-btn linkedin" data-share="linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</button></div></div>
       </div>
 
-      <!-- Artigo completo NOVO: MEI 2026 -->
+      <!-- Artigo completo: MEI 2026 -->
       <div class="full-article" id="artigo-mei2026">
-        <div class="article-header">
-          <div class="article-meta">
-            <span><i class="far fa-calendar-alt"></i> 10/03/2026</span>
-            <span><i class="far fa-user"></i> Paulo H. Fagundes</span>
-            <span><i class="far fa-folder"></i> MEI</span>
-          </div>
-          <h2>MEI 2026: limites, obrigações e vantagens atualizadas</h2>
-        </div>
-
-        <img class="featured-image" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Microempreendedor Individual - MEI">
-
-        <div class="article-body">
-          <p>O Microempreendedor Individual (MEI) continua sendo a porta de entrada para milhares de brasileiros que desejam formalizar o negócio. Em 2026, algumas regras foram atualizadas, principalmente o limite de faturamento e a contribuição mensal (DAS).</p>
-
-          <h3>Limite de faturamento do MEI em 2026</h3>
-          <p>Com o reajuste anual baseado no salário mínimo, o teto do MEI passou para <strong>R$ 81.000,00 por ano</strong> (média de R$ 6.750,00 por mês). Quem ultrapassar esse limite, mas não exceder 20% (R$ 97.200,00), pode continuar no MEI, mas no ano seguinte será desenquadrado para Microempresa (ME). Acima de 20%, o desenquadramento é imediato.</p>
-
-          <h3>Valor do DAS (Documento de Arrecadação do Simples Nacional)</h3>
-          <p>A contribuição mensal do MEI em 2026 continua sendo composta por:</p>
-          <ul>
-            <li><strong>5% do salário mínimo</strong> (INSS) → R$ 75,90 (com base no mínimo de R$ 1.518,00);</li>
-            <li><strong>R$ 1,00 de ICMS</strong> (comércio e indústria);</li>
-            <li><strong>R$ 5,00 de ISS</strong> (prestação de serviços).</li>
-          </ul>
-          <p>Dependendo da atividade, o DAS fica entre <strong>R$ 76,90</strong> (apenas comércio) e <strong>R$ 81,90</strong> (comércio + serviços).</p>
-
-          <h3>Obrigações anuais: Declaração Anual do MEI (DASN-SIMEI)</h3>
-          <p>Todo MEI deve entregar, até o dia 31 de maio de 2026, a declaração referente ao ano-calendário 2025. A declaração informa o faturamento bruto e confirma se não houve ultrapassagem do limite. Atraso gera multa mínima de R$ 50,00 ou 2% ao mês sobre o valor devido.</p>
-
-          <div style="background: #e6f7ff; border-left: 6px solid var(--primary-light); padding: 20px; border-radius: 8px; margin: 30px 0;">
-            <p style="margin: 0; font-weight: 600;">💡 Dica importante: mesmo que você não tenha faturado nada (MEI inativo), a declaração anual deve ser entregue com valor "R$ 0,00".</p>
-          </div>
-
-          <h3>Vantagens de ser MEI</h3>
-          <ul>
-            <li><strong>CNPJ próprio</strong> – emissão de notas fiscais e acesso a fornecedores;</li>
-            <li><strong>Benefícios previdenciários</strong> – aposentadoria por idade, auxílio-doença, salário-maternidade;</li>
-            <li><strong>Menor carga tributária</strong> – pagamento mensal fixo e baixo;</li>
-            <li><strong>Isenção de impostos federais</strong> (IRPJ, PIS, Cofins, IPI);</li>
-            <li><strong>Acesso a linhas de crédito</strong> com condições especiais.</li>
-          </ul>
-
-          <h3>Cuidados para não cair na malha fina</h3>
-          <p>É obrigatório emitir notas fiscais para vendas ou serviços prestados a pessoas jurídicas. Para pessoas físicas, a emissão pode ser obrigatória em alguns municípios. Além disso, o MEI pode ter apenas <strong>um empregado</strong>, contratado com salário mínimo ou piso da categoria.</p>
-
-          <h3>Como a Fagundes Assessoria Contábil pode ajudar?</h3>
-          <p>Oferecemos serviços completos para MEI: abertura, regularização, declaração anual (DASN) e emissão de guias DAS. Tudo por um valor acessível e com suporte contínuo. Entre em contato e mantenha seu MEI em dia!</p>
-
-          <!-- Chamada específica para MEI -->
-          <div style="background: var(--primary-deep); color: white; padding: 30px; border-radius: 24px; margin-top: 40px; text-align: center;">
-            <i class="fas fa-file-invoice" style="font-size: 3rem; color: var(--gold); margin-bottom: 16px;"></i>
-            <h4 style="color: white; font-size: 1.8rem; margin-bottom: 16px;">Precisa de ajuda com seu MEI?</h4>
-            <p style="font-size: 1.1rem; margin-bottom: 24px; opacity: 0.9;">Fazemos sua declaração anual, emitimos DAS e regularizamos pendências. Preços especiais!</p>
-            <a href="https://wa.me/5519983247476" class="btn" style="background: var(--whatsapp-dark); color: white; padding: 14px 32px; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px;">
-              <i class="fab fa-whatsapp"></i> FALAR COM ESPECIALISTA
-            </a>
-          </div>
-        </div>
+        <div class="article-header"><div class="article-meta"><span><i class="far fa-calendar-alt"></i> 10/03/2026</span><span><i class="far fa-user"></i> Paulo H. Fagundes</span><span><i class="far fa-folder"></i> MEI</span></div><h2>MEI 2026: limites, obrigações e vantagens atualizadas</h2></div>
+        <img class="featured-image" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="MEI 2026">
+        <div class="article-body"><p>O Microempreendedor Individual (MEI) continua sendo a porta de entrada para formalização...</p><h3>Limite de faturamento do MEI em 2026</h3><p>Com o reajuste, o teto passou para <strong>R$ 81.000,00 por ano</strong>.</p><h3>Valor do DAS</h3><p>Contribuição mensal: INSS + ICMS/ISS.</p></div>
+        <div class="share-article-container"><div class="share-title"><i class="fas fa-share-alt"></i> Compartilhe este artigo</div><div class="share-buttons"><button class="share-btn facebook" data-share="facebook"><i class="fab fa-facebook-f"></i> Facebook</button><button class="share-btn linkedin" data-share="linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</button></div></div>
       </div>
 
-      <!-- Botão para carregar mais (opcional) -->
-      <div style="text-align: center; margin-top: 50px;" data-aos="fade-up">
-        <a href="#" class="btn btn-outline" style="padding: 14px 40px;">
-          <i class="fas fa-sync-alt"></i> Carregar mais artigos
-        </a>
-      </div>
+      <div style="text-align: center; margin-top: 50px;"><a href="#" class="btn btn-outline" style="padding: 14px 40px;"><i class="fas fa-sync-alt"></i> Carregar mais artigos</a></div>
     </div>
   </section>
 
-  <!-- CTA FINAL (WHATSAPP) - IGUAL AO SITE ORIGINAL -->
-  <section style="padding: 0 0 80px;">
-    <div class="container">
-      <div style="background: var(--primary-deep); border-radius: 40px; padding: 50px; color: white; text-align: center;" data-aos="zoom-in">
-        <i class="fab fa-whatsapp" style="font-size: 4rem; color: var(--whatsapp); margin-bottom: 20px;"></i>
-        <h2 style="color: white; font-size: 2.2rem; margin-bottom: 16px;">Fale com um especialista</h2>
-        <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; opacity: 0.9;">Tire suas dúvidas sobre contabilidade, impostos ou declaração de IR. Atendimento rápido e personalizado.</p>
-        <a href="https://wa.me/5519983247476" class="btn" style="background: var(--whatsapp-dark); color: white; padding: 16px 40px; font-size: 1.2rem; display: inline-flex; align-items: center; gap: 10px;">
-          <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
-        </a>
-      </div>
-    </div>
-  </section>
+  <section style="padding: 0 0 80px;"><div class="container"><div style="background: var(--primary-deep); border-radius: 40px; padding: 50px; color: white; text-align: center;" data-aos="zoom-in"><i class="fab fa-whatsapp" style="font-size: 4rem; color: var(--whatsapp); margin-bottom: 20px;"></i><h2 style="color: white;">Fale com um especialista</h2><a href="https://wa.me/5519983247476" class="btn" style="background: var(--whatsapp-dark); color: white;"><i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP</a></div></div></section>
 </main>
 
-<!-- FOOTER (idêntico ao da página principal) -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div style="margin-bottom: 16px;">
-          <img src="https://i.imgur.com/RfT7Wpg.png" alt="Fagundes Assessoria Contábil">
-        </div>
-        <p>Escritório de contabilidade em Valinhos/SP. Especialistas em MEI, ME e EPP e Declaração de IRPF a partir de R$120.</p>
-        <p style="margin-top: 16px;"><strong style="color: var(--primary-light);">Contador Responsável:</strong> Paulo Henrique Fagundes</p>
-      </div>
-      <div>
-        <h4>Serviços</h4>
-        <ul>
-          <li>Contabilidade MEI/ME/EPP</li>
-          <li>Simples Nacional/Lucro Presumido</li>
-          <li>Abertura/Encerramento</li>
-          <li style="font-weight: 600; color: var(--primary-light);">IRPF a partir de R$120</li>
-          <li>Regularização de empresas</li>
-          <li>Alvará de Licenciamento</li>
-          <li>Certificados Digitais</li>
-          <li>Cálculos Trabalhistas</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contato</h4>
-        <ul>
-          <li>(19) 98324-7476</li>
-          <li>Valinhos/SP</li>
-          <li>Segunda a sexta</li>
-          <li>09h às 12h | 13h às 18h</li>
-          <li class="break-email">fagundesassessoriacontabil@hotmail.com</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Redes Sociais</h4>
-        <div class="social-links">
-          <a href="https://www.instagram.com/fagundesassessoriacontabil" target="_blank" rel="noopener" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.facebook.com/people/Fagundes-Assessoria-Cont%C3%A1bil/100031551657189" target="_blank" rel="noopener" aria-label="Facebook">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/assessoria-cont%C3%A1bil-fagundes-22653629" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </div>
-        <p style="margin-top: 15px; color: #a0b3c5;">Acompanhe nossas novidades e dicas contábeis!</p>
-      </div>
-    </div>
-    <div style="text-align: center; padding-top: 25px; border-top: 1px solid #1e3a47; color: #8a9eb0;">
-      <p>© 2026 Fagundes Assessoria Contábil. Todos os direitos reservados.</p>
-    </div>
-  </div>
-</footer>
+<footer><div class="container"><div class="footer-grid"><div><div><img src="https://i.imgur.com/RfT7Wpg.png" alt="Fagundes"></div><p>Escritório de contabilidade em Valinhos/SP.</p></div><div><h4>Serviços</h4><ul><li>Contabilidade MEI/ME/EPP</li><li>IRPF a partir de R$120</li></ul></div><div><h4>Contato</h4><ul><li>(19) 98324-7476</li><li>fagundesassessoriacontabil@hotmail.com</li></ul></div><div><h4>Redes Sociais</h4><div class="social-links"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></div></div></div><div style="text-align: center;"><p>© 2026 Fagundes Assessoria Contábil.</p></div></div></footer>
 
-<!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 600,
-    once: true,
-    offset: 50,
-    disable: window.innerWidth < 768
-  });
+  AOS.init({ duration: 600, once: true, offset: 50, disable: window.innerWidth < 768 });
+  document.getElementById('menuToggle')?.addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('show'));
 
-  // MENU MOBILE
-  document.getElementById('menuToggle').addEventListener('click', function() {
-    document.querySelector('.nav-links').classList.toggle('show');
-  });
-
-  // LÓGICA PARA EXIBIR ARTIGO COMPLETO (MÚLTIPLOS ARTIGOS)
+  // Lógica artigos + COMPARTILHAMENTO PROFISSIONAL COM IMAGEM DO ARTIGO
   const btnBack = document.getElementById('btnBack');
   const articlesGrid = document.getElementById('articlesGrid');
   const fullArticles = document.querySelectorAll('.full-article');
   const articleLinks = document.querySelectorAll('.article-link');
 
-  // Função para esconder todos os artigos completos
-  function hideAllFullArticles() {
-    fullArticles.forEach(article => {
-      article.classList.remove('show');
-    });
-  }
+  function hideAllFullArticles() { fullArticles.forEach(a => a.classList.remove('show')); }
+  function showGrid() { articlesGrid.style.display = 'grid'; btnBack.style.display = 'none'; hideAllFullArticles(); }
 
-  // Função para mostrar o grid e esconder botão voltar
-  function showGrid() {
-    articlesGrid.style.display = 'grid';
-    btnBack.style.display = 'none';
-    hideAllFullArticles();
-  }
-
-  // Adicionar evento a cada botão "Ler artigo completo"
   articleLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', (e) => {
       e.preventDefault();
-      const targetId = this.getAttribute('data-target');
-      if (targetId) {
-        const targetArticle = document.getElementById(targetId);
-        if (targetArticle) {
-          // Esconder grid, mostrar botão voltar e mostrar o artigo alvo
-          articlesGrid.style.display = 'none';
-          btnBack.style.display = 'inline-flex';
-          hideAllFullArticles();
-          targetArticle.classList.add('show');
-          // Rolar suavemente até o artigo
-          targetArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+      const targetId = link.getAttribute('data-target');
+      const targetArticle = document.getElementById(targetId);
+      if (targetArticle) {
+        articlesGrid.style.display = 'none';
+        btnBack.style.display = 'inline-flex';
+        hideAllFullArticles();
+        targetArticle.classList.add('show');
+        targetArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });
 
-  // Botão voltar: retorna ao grid
-  btnBack.addEventListener('click', function() {
-    showGrid();
-    // Rolar de volta para o grid
-    articlesGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  btnBack.addEventListener('click', () => { showGrid(); articlesGrid.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+
+  // ========== SHARE PROFISSIONAL CORRIGIDO ==========
+  function getCurrentArticleData(articleElement) {
+    const titleElem = articleElement.querySelector('.article-header h2');
+    const title = titleElem ? titleElem.innerText.trim() : document.title;
+    const descElem = articleElement.querySelector('.article-body p');
+    let description = descElem ? descElem.innerText.trim().substring(0, 200) : "Leia este artigo completo no site da Fagundes Assessoria Contábil.";
+    const imgElem = articleElement.querySelector('.featured-image');
+    const imageUrl = imgElem ? imgElem.src : "https://i.imgur.com/RfT7Wpg.png";
+    // URL completa sem codificação extra (a codificação será feita no parâmetro da query)
+    const rawUrl = window.location.href.split('#')[0] + '#' + articleElement.id;
+    return { title, description, imageUrl, rawUrl };
+  }
+
+  // Atualiza os meta tags OG dinamicamente (não influencia o crawler, mas pode ajudar em compartilhamentos com API)
+  function updateOpenGraph(title, description, imageUrl) {
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    let ogDesc = document.querySelector('meta[property="og:description"]');
+    let ogImage = document.querySelector('meta[property="og:image"]');
+    if (!ogTitle) { ogTitle = document.createElement('meta'); ogTitle.setAttribute('property', 'og:title'); document.head.appendChild(ogTitle); }
+    if (!ogDesc) { ogDesc = document.createElement('meta'); ogDesc.setAttribute('property', 'og:description'); document.head.appendChild(ogDesc); }
+    if (!ogImage) { ogImage = document.createElement('meta'); ogImage.setAttribute('property', 'og:image'); document.head.appendChild(ogImage); }
+    ogTitle.setAttribute('content', title);
+    ogDesc.setAttribute('content', description);
+    ogImage.setAttribute('content', imageUrl);
+  }
+
+  function shareOnFacebook(articleElement) {
+    const data = getCurrentArticleData(articleElement);
+    updateOpenGraph(data.title, data.description, data.imageUrl);
+    // Monta a URL de compartilhamento do Facebook com o parâmetro u devidamente codificado
+    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(data.rawUrl)}`;
+    window.open(shareUrl, 'facebook-share', 'width=626,height=436,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');
+  }
+
+  function shareOnLinkedIn(articleElement) {
+    const data = getCurrentArticleData(articleElement);
+    updateOpenGraph(data.title, data.description, data.imageUrl);
+    const linkedinUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(data.rawUrl)}&title=${encodeURIComponent(data.title)}&summary=${encodeURIComponent(data.description)}&source=Fagundes%20Assessoria%20Contábil`;
+    window.open(linkedinUrl, 'linkedin-share', 'width=626,height=436,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');
+  }
+
+  // Atribuir eventos aos botões de compartilhamento em cada artigo
+  document.querySelectorAll('.full-article').forEach(article => {
+    const fbBtn = article.querySelector('.share-btn.facebook');
+    const liBtn = article.querySelector('.share-btn.linkedin');
+    if (fbBtn) fbBtn.addEventListener('click', (e) => { e.preventDefault(); shareOnFacebook(article); });
+    if (liBtn) liBtn.addEventListener('click', (e) => { e.preventDefault(); shareOnLinkedIn(article); });
   });
 
-  // Se houver âncora na URL (opcional para deep linking), pode-se implementar
-  window.addEventListener('load', function() {
+  // Para abrir com hash na URL exibir artigo correto
+  window.addEventListener('load', () => {
     const hash = window.location.hash.substring(1);
     if (hash) {
       const targetArticle = document.getElementById(hash);
@@ -1174,6 +928,5 @@
     }
   });
 </script>
-
 </body>
 </html>
